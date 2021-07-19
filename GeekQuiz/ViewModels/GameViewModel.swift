@@ -11,6 +11,8 @@ import RxRelay
 
 class GameViewModel {
     
+    
+    // comment for pull request
     var question: BehaviorRelay<Question?>
     var questions: [Question] = []
     let bag = DisposeBag()
