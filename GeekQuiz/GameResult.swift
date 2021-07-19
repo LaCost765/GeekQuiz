@@ -1,8 +1,0 @@
-//
-//  GameResult.swift
-//  GeekQuiz
-//
-//  Created by Egor on 11.07.2021.
-//
-
-import Foundation
