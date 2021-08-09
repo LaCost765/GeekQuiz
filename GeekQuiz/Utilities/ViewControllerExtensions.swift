@@ -7,25 +7,30 @@
 
 import UIKit
 
-fileprivate var aView: UIView?
-
 extension UIViewController {
     
-    func showActivityIndicator() {
+    func createActivityIndicator() -> UIView {
         
-        aView = UIView(frame: self.view.bounds)
-        aView?.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        let activityIndicatorView = UIView(frame: self.view.bounds)
+        activityIndicatorView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
         
         let ai = UIActivityIndicatorView(style: .large)
-        ai.center = aView!.center
+        ai.center = activityIndicatorView.center
         ai.startAnimating()
-        aView?.addSubview(ai)
-        self.view.addSubview(aView!)
+        activityIndicatorView.addSubview(ai)
+        self.view.addSubview(activityIndicatorView)
+        return activityIndicatorView
     }
     
-    func removeActivityIndicator() {
+    func showInformationAlert(title: String, message: String, confirmButtonTitle: String, confirmHandler: ((UIAlertAction) -> Void)?) {
         
-        aView?.removeFromSuperview()
-        aView = nil
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: confirmButtonTitle, style: .cancel, handler: confirmHandler)
+        alert.addAction(action)
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }

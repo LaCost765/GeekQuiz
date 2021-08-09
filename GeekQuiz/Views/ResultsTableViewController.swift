@@ -9,11 +9,21 @@ import UIKit
 
 class ResultsTableViewController: UITableViewController {
 
-    var results: [GameResult]!
+    var results: [GameResult?] = []
+    var aiView: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        results = Game.shared.results
+        aiView = createActivityIndicator()
+        let fb = FirebaseFacade()
+        fb.loadAllUsersResults { [weak self] results in
+            self?.results = results
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+                self?.aiView?.removeFromSuperview()
+                self?.aiView = nil
+            }
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -36,7 +46,9 @@ class ResultsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "resultCell", for: indexPath) as? ResultTableViewCell else { return UITableViewCell() }
-        cell.configureResult(with: results[indexPath.row])
+        guard let result = results[indexPath.row] else { return UITableViewCell() }
+        
+        cell.configureResult(with: result)
         return cell
     }
     

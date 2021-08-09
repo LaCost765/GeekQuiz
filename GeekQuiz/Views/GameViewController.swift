@@ -31,22 +31,10 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = GameViewModel()
-        createActivityIndicator()
+        activityIndicatorView = createActivityIndicator()
         subscription()
         styleButtons()
         // Do any additional setup after loading the view.
-    }
-    
-    func createActivityIndicator() {
-        
-        activityIndicatorView = UIView(frame: self.view.bounds)
-        activityIndicatorView?.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-        
-        let ai = UIActivityIndicatorView(style: .large)
-        ai.center = activityIndicatorView!.center
-        ai.startAnimating()
-        activityIndicatorView?.addSubview(ai)
-        self.view.addSubview(activityIndicatorView!)
     }
     
     func subscription() {
@@ -194,15 +182,4 @@ class GameViewController: UIViewController {
     }
     */
 
-}
-
-extension UIViewController {
-    
-    func showInformationAlert(title: String, message: String, confirmButtonTitle: String, confirmHandler: ((UIAlertAction) -> Void)?) {
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: confirmButtonTitle, style: .cancel, handler: confirmHandler)
-        alert.addAction(action)
-        self.present(alert, animated: true, completion: nil)
-    }
 }

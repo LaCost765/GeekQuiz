@@ -1,0 +1,105 @@
+
+/* Class = "UILabel"; text = "Enter the correct email"; ObjectID = "3cW-0T-pcW"; */
+"3cW-0T-pcW.text" = "Enter the correct email";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "5fP-HV-MP5"; */
+"5fP-HV-MP5.text" = "Password";
+
+/* Class = "UILabel"; text = "Only letters are allowed"; ObjectID = "6QQ-xy-zoH"; */
+"6QQ-xy-zoH.text" = "Only letters are allowed";
+
+/* Class = "UILabel"; text = "0 $"; ObjectID = "7Ex-T9-ZuK"; */
+"7Ex-T9-ZuK.text" = "0 $";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "9VC-Gw-Jui"; */
+"9VC-Gw-Jui.normalTitle" = "Sign Up";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "Au0-mA-rAO"; */
+"Au0-mA-rAO.text" = "Email";
+
+/* Class = "UILabel"; text = "Егор"; ObjectID = "Eda-s3-BYg"; */
+"Eda-s3-BYg.text" = "Егор";
+
+/* Class = "UILabel"; text = "Minimum of 8 characters, capital letter and number"; ObjectID = "Gb6-hG-ZCz"; */
+"Gb6-hG-ZCz.text" = "Minimum of 8 characters, capital letter and number";
+
+/* Class = "UILabel"; text = "Категория"; ObjectID = "H3q-oG-1md"; */
+"H3q-oG-1md.text" = "Категория";
+
+/* Class = "UILabel"; text = "Only letters are allowed"; ObjectID = "H7n-N5-DaO"; */
+"H7n-N5-DaO.text" = "Only letters are allowed";
+
+/* Class = "UIButton"; normalTitle = "Sign Out"; ObjectID = "Ltw-nc-jd4"; */
+"Ltw-nc-jd4.normalTitle" = "Sign Out";
+
+/* Class = "UIButton"; normalTitle = "Rules"; ObjectID = "P90-Cn-gGZ"; */
+"P90-Cn-gGZ.normalTitle" = "Rules";
+
+/* Class = "UIButton"; normalTitle = "Not registered yet?"; ObjectID = "UTV-v8-lS4"; */
+"UTV-v8-lS4.normalTitle" = "Not registered yet?";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "Xhn-DE-XtF"; */
+"Xhn-DE-XtF.text" = "Name";
+
+/* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "YSl-UE-WrG"; */
+"YSl-UE-WrG.normalTitle" = "Sign In";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "a9C-cT-aPi"; */
+"a9C-cT-aPi.text" = "Email";
+
+/* Class = "UINavigationItem"; title = "Authorization"; ObjectID = "c5g-uv-kNW"; */
+"c5g-uv-kNW.title" = "Authorization";
+
+/* Class = "UILabel"; text = "GeekQuiz"; ObjectID = "dDc-zK-hPc"; */
+"dDc-zK-hPc.text" = "GeekQuiz";
+
+/* Class = "UILabel"; text = "GeekMobile"; ObjectID = "drg-zv-tEm"; */
+"drg-zv-tEm.text" = "GeekMobile";
+
+/* Class = "UINavigationItem"; title = "Registration"; ObjectID = "f0V-av-hZy"; */
+"f0V-av-hZy.title" = "Registration";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "gf7-8E-8MW"; */
+"gf7-8E-8MW.normalTitle" = "Start";
+
+/* Class = "UILabel"; text = "Geek Quiz"; ObjectID = "h3n-hb-UKh"; */
+"h3n-hb-UKh.text" = "Geek Quiz";
+
+/* Class = "UILabel"; text = "Minimum of 8 characters, capital letter and number"; ObjectID = "h4V-4i-ePv"; */
+"h4V-4i-ePv.text" = "Minimum of 8 characters, capital letter and number";
+
+/* Class = "UILabel"; text = "Вопрос"; ObjectID = "hjR-C9-3vx"; */
+"hjR-C9-3vx.text" = "Вопрос";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "jr8-bf-CE6"; */
+"jr8-bf-CE6.text" = "Password";
+
+/* Class = "UILabel"; text = "Выигрыш: 0 $"; ObjectID = "jzx-ck-Ush"; */
+"jzx-ck-Ush.text" = "Выигрыш: 0 $";
+
+/* Class = "UISegmentedControl"; lMQ-Ao-rm7.segmentTitles[0] = "EN"; ObjectID = "lMQ-Ao-rm7"; */
+"lMQ-Ao-rm7.segmentTitles[0]" = "EN";
+
+/* Class = "UISegmentedControl"; lMQ-Ao-rm7.segmentTitles[1] = "RUS"; ObjectID = "lMQ-Ao-rm7"; */
+"lMQ-Ao-rm7.segmentTitles[1]" = "RUS";
+
+/* Class = "UILabel"; text = "Surname"; ObjectID = "m3I-U6-dlf"; */
+"m3I-U6-dlf.text" = "Surname";
+
+/* Class = "UILabel"; text = "Enter the correct email"; ObjectID = "rAJ-2m-JdQ"; */
+"rAJ-2m-JdQ.text" = "Enter the correct email";
+
+/* Class = "UISegmentedControl"; t5a-1Y-rS2.segmentTitles[0] = "EN"; ObjectID = "t5a-1Y-rS2"; */
+"t5a-1Y-rS2.segmentTitles[0]" = "EN";
+
+/* Class = "UISegmentedControl"; t5a-1Y-rS2.segmentTitles[1] = "RUS"; ObjectID = "t5a-1Y-rS2"; */
+"t5a-1Y-rS2.segmentTitles[1]" = "RUS";
+
+/* Class = "UILabel"; text = "17.07.2021"; ObjectID = "tLn-zs-XGN"; */
+"tLn-zs-XGN.text" = "17.07.2021";
+
+/* Class = "UIButton"; normalTitle = "Leaderboard"; ObjectID = "tj5-kK-7Qy"; */
+"tj5-kK-7Qy.normalTitle" = "Leaderboard";
+
+/* Class = "UILabel"; text = "800000 $"; ObjectID = "vqb-Ki-6I5"; */
+"vqb-Ki-6I5.text" = "800000 $";

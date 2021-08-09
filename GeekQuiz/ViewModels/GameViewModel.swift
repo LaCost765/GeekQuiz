@@ -11,7 +11,6 @@ import RxRelay
 
 class GameViewModel {
     
-    
     // comment for pull request
     var question: BehaviorRelay<Question?>
     var questions: [Question] = []
@@ -78,6 +77,16 @@ class GameViewModel {
             message = "К сожалению, вы не смогли полностью пройти викторину, поэтому ваш выигрыш составляет \(prize) $. Не расстрайвайтесь и попробуйте еще раз!"
         }
        
+        if let gameResult = Game.shared.createGameResult() {
+            
+            let fb = FirebaseFacade()
+            
+            if (Game.shared.bestResult?.prize ?? 0) <= gameResult.prize {
+                Game.shared.bestResult = gameResult
+                fb.addResultToFirestore(result: gameResult)
+            }
+        }
+        
         Game.shared.saveSessionResult()
         gameFinished.onNext(message)
     }

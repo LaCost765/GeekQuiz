@@ -11,4 +11,6 @@ target 'GeekQuiz' do
   pod 'RxCocoa'
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 end

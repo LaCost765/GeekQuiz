@@ -12,33 +12,36 @@ class StartViewController: UIViewController {
     @IBOutlet weak var startGameButton: UIButton!
     @IBOutlet weak var showResultsButton: UIButton!
     @IBOutlet weak var showRulesButton: UIButton!
+    var aiView: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        aiView = createActivityIndicator()
+        loadUserBestResult()
         // Do any additional setup after loading the view.
+    }
+    
+    func loadUserBestResult() {
+        let fb = FirebaseFacade()
+        if Game.shared.userName == "", let name = fb.getCurrentUserName() {
+            Game.shared.userName = name
+        }
+        
+        fb.loadBestResultForUser { [weak self] result in
+            Game.shared.bestResult = result
+            self?.aiView?.removeFromSuperview()
+            self?.aiView = nil
+        }
     }
     
     @IBAction func startGameButtonTapped(sender: Any) {
         
-        let alert = UIAlertController(title: "Введите ваше имя", message: "", preferredStyle: .alert)
-        alert.addTextField { textField in
-            textField.placeholder = "Ваше имя"
-            textField.delegate = self
-        }
-        alert.addAction(UIAlertAction(title: "Отмена", style: .destructive, handler: nil))
-        alert.addAction(UIAlertAction(title: "Старт", style: .cancel) { [weak self] _ in
-            guard let self = self else { return }
-            guard let userName = alert.textFields?[0].text else { return }
-            self.createAndStartGame(for: userName)
-        })
-        
-        self.present(alert, animated: true, completion: nil)
+        self.createAndStartGame()
     }
     
-    func createAndStartGame(for user: String) {
+    func createAndStartGame() {
         
-        let session = GameSession(for: user)
+        let session = GameSession(for: Game.shared.userName)
         Game.shared.session = session
         self.performSegue(withIdentifier: "StartGameSegue", sender: nil)
     }
@@ -53,6 +56,23 @@ class StartViewController: UIViewController {
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         
+    }
+    
+    @IBAction func signOutButtonTapped(sender: Any) {
+        
+        let fb = FirebaseFacade()
+        fb.signOut()
+        goToLoginVC()
+    }
+    
+    func goToLoginVC() {
+        DispatchQueue.main.async { [weak self] in
+            
+            guard let self = self else { return }
+            let viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+            self.view.window?.rootViewController = viewController
+            self.view.window?.makeKeyAndVisible()
+        }
     }
     
     /*

@@ -10,6 +10,17 @@
 		3FBC0125A61972437506FCEE /* Pods_GeekQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A94DE5F54D82134BF05396 /* Pods_GeekQuiz.framework */; };
 		743B5B6026A4820E0094B1DD /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B5B5F26A4820E0094B1DD /* ResultTableViewCell.swift */; };
 		743B5B6226A4839C0094B1DD /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B5B6126A4839C0094B1DD /* ResultsTableViewController.swift */; };
+		7472350126C11422006B58D0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7472350326C11422006B58D0 /* Localizable.strings */; };
+		74844B0A26A61060006D6B95 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74844B0826A61060006D6B95 /* LoginViewController.swift */; };
+		74844B0B26A61060006D6B95 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74844B0926A61060006D6B95 /* SignUpViewController.swift */; };
+		74844B0F26A610F0006D6B95 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74844B0D26A610F0006D6B95 /* SignUpViewModel.swift */; };
+		74844B1026A610F0006D6B95 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74844B0E26A610F0006D6B95 /* LoginViewModel.swift */; };
+		74844B1526A611FC006D6B95 /* UITitleTextErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74844B1226A611FC006D6B95 /* UITitleTextErrorView.swift */; };
+		74844B1626A611FC006D6B95 /* UIScrollableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74844B1326A611FC006D6B95 /* UIScrollableViewController.swift */; };
+		74844B1726A611FC006D6B95 /* UIPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74844B1426A611FC006D6B95 /* UIPaddingLabel.swift */; };
+		74844B1A26A6BB60006D6B95 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74844B1926A6BB60006D6B95 /* StringExtensions.swift */; };
+		74844B1D26A6BBF0006D6B95 /* FirebaseFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74844B1C26A6BBF0006D6B95 /* FirebaseFacade.swift */; };
+		74844B1F26A6BC93006D6B95 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74844B1E26A6BC93006D6B95 /* GoogleService-Info.plist */; };
 		748B9E5B269F0B2A0025AF3A /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748B9E5A269F0B2A0025AF3A /* ViewControllerExtensions.swift */; };
 		74918CFA26A3181F003F7053 /* GameResultsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74918CF926A3181F003F7053 /* GameResultsCaretaker.swift */; };
 		74E4A6F62699CC460072E878 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E4A6F52699CC460072E878 /* AppDelegate.swift */; };
@@ -33,6 +44,20 @@
 		4D58EC315FE52511CD8DD8D5 /* Pods-GeekQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekQuiz.debug.xcconfig"; path = "Target Support Files/Pods-GeekQuiz/Pods-GeekQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 		743B5B5F26A4820E0094B1DD /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		743B5B6126A4839C0094B1DD /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		747234FD26C11408006B58D0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		747234FE26C11408006B58D0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		7472350226C11422006B58D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7472350426C11425006B58D0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		74844B0826A61060006D6B95 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		74844B0926A61060006D6B95 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		74844B0D26A610F0006D6B95 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		74844B0E26A610F0006D6B95 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		74844B1226A611FC006D6B95 /* UITitleTextErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITitleTextErrorView.swift; sourceTree = "<group>"; };
+		74844B1326A611FC006D6B95 /* UIScrollableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollableViewController.swift; sourceTree = "<group>"; };
+		74844B1426A611FC006D6B95 /* UIPaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPaddingLabel.swift; sourceTree = "<group>"; };
+		74844B1926A6BB60006D6B95 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		74844B1C26A6BBF0006D6B95 /* FirebaseFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFacade.swift; sourceTree = "<group>"; };
+		74844B1E26A6BC93006D6B95 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		748B9E5A269F0B2A0025AF3A /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		74918CF926A3181F003F7053 /* GameResultsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultsCaretaker.swift; sourceTree = "<group>"; };
 		74E4A6F22699CC460072E878 /* GeekQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeekQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +99,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		74844B0726A61012006D6B95 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				74844B0826A61060006D6B95 /* LoginViewController.swift */,
+				74844B0926A61060006D6B95 /* SignUpViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		74844B0C26A610C1006D6B95 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				74844B0E26A610F0006D6B95 /* LoginViewModel.swift */,
+				74844B0D26A610F0006D6B95 /* SignUpViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		74844B1126A611B1006D6B95 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				74844B1426A611FC006D6B95 /* UIPaddingLabel.swift */,
+				74844B1326A611FC006D6B95 /* UIScrollableViewController.swift */,
+				74844B1226A611FC006D6B95 /* UITitleTextErrorView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		74844B1826A6BB4E006D6B95 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				748B9E5A269F0B2A0025AF3A /* ViewControllerExtensions.swift */,
+				74844B1926A6BB60006D6B95 /* StringExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		74844B1B26A6BBB5006D6B95 /* Facades */ = {
+			isa = PBXGroup;
+			children = (
+				74844B1C26A6BBF0006D6B95 /* FirebaseFacade.swift */,
+			);
+			name = Facades;
+			sourceTree = "<group>";
+		};
 		74E4A6E92699CC460072E878 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +175,8 @@
 				74E4A7002699CC470072E878 /* LaunchScreen.storyboard */,
 				74E4A6FE2699CC470072E878 /* Assets.xcassets */,
 				74E4A7032699CC470072E878 /* Info.plist */,
+				74844B1E26A6BC93006D6B95 /* GoogleService-Info.plist */,
+				7472350326C11422006B58D0 /* Localizable.strings */,
 			);
 			path = GeekQuiz;
 			sourceTree = "<group>";
@@ -123,6 +195,7 @@
 		74E4A716269B3F260072E878 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				74844B0C26A610C1006D6B95 /* Login */,
 				74E4A71B269B4A930072E878 /* GameViewModel.swift */,
 			);
 			path = ViewModels;
@@ -131,6 +204,8 @@
 		74E4A717269B3F300072E878 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				74844B1126A611B1006D6B95 /* CustomViews */,
+				74844B0726A61012006D6B95 /* Login */,
 				74E4A7092699F43C0072E878 /* StartViewController.swift */,
 				74E4A711269A5CBE0072E878 /* GameViewController.swift */,
 				743B5B5F26A4820E0094B1DD /* ResultTableViewCell.swift */,
@@ -142,9 +217,10 @@
 		74E4A718269B41230072E878 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				74844B1B26A6BBB5006D6B95 /* Facades */,
+				74844B1826A6BB4E006D6B95 /* Extensions */,
 				74E4A719269B49AD0072E878 /* NetworkManager.swift */,
 				74F38153269BA1390077F86F /* ParserJSON.swift */,
-				748B9E5A269F0B2A0025AF3A /* ViewControllerExtensions.swift */,
 				74918CF926A3181F003F7053 /* GameResultsCaretaker.swift */,
 			);
 			path = Utilities;
@@ -202,6 +278,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 74E4A6E92699CC460072E878;
 			productRefGroup = 74E4A6F32699CC460072E878 /* Products */;
@@ -218,7 +295,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7472350126C11422006B58D0 /* Localizable.strings in Resources */,
 				74E4A7022699CC470072E878 /* LaunchScreen.storyboard in Resources */,
+				74844B1F26A6BC93006D6B95 /* GoogleService-Info.plist in Resources */,
 				74E4A6FF2699CC470072E878 /* Assets.xcassets in Resources */,
 				74E4A6FD2699CC460072E878 /* Main.storyboard in Resources */,
 			);
@@ -277,16 +356,25 @@
 				74918CFA26A3181F003F7053 /* GameResultsCaretaker.swift in Sources */,
 				743B5B6026A4820E0094B1DD /* ResultTableViewCell.swift in Sources */,
 				74E4A71A269B49AD0072E878 /* NetworkManager.swift in Sources */,
+				74844B0F26A610F0006D6B95 /* SignUpViewModel.swift in Sources */,
+				74844B1626A611FC006D6B95 /* UIScrollableViewController.swift in Sources */,
 				74F38154269BA1390077F86F /* ParserJSON.swift in Sources */,
+				74844B0B26A61060006D6B95 /* SignUpViewController.swift in Sources */,
 				74E4A70A2699F43C0072E878 /* StartViewController.swift in Sources */,
 				748B9E5B269F0B2A0025AF3A /* ViewControllerExtensions.swift in Sources */,
 				74E4A6F62699CC460072E878 /* AppDelegate.swift in Sources */,
 				74E4A712269A5CBE0072E878 /* GameViewController.swift in Sources */,
+				74844B1D26A6BBF0006D6B95 /* FirebaseFacade.swift in Sources */,
+				74844B1A26A6BB60006D6B95 /* StringExtensions.swift in Sources */,
+				74844B1526A611FC006D6B95 /* UITitleTextErrorView.swift in Sources */,
 				743B5B6226A4839C0094B1DD /* ResultsTableViewController.swift in Sources */,
+				74844B1726A611FC006D6B95 /* UIPaddingLabel.swift in Sources */,
 				74E4A70E269A25910072E878 /* GameSession.swift in Sources */,
 				74E4A710269A268A0072E878 /* Question.swift in Sources */,
+				74844B0A26A61060006D6B95 /* LoginViewController.swift in Sources */,
 				74E4A6F82699CC460072E878 /* SceneDelegate.swift in Sources */,
 				74E4A71C269B4A930072E878 /* GameViewModel.swift in Sources */,
+				74844B1026A610F0006D6B95 /* LoginViewModel.swift in Sources */,
 				74E4A714269B271F0072E878 /* GameResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,10 +382,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		7472350326C11422006B58D0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7472350226C11422006B58D0 /* en */,
+				7472350426C11425006B58D0 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		74E4A6FB2699CC460072E878 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				74E4A6FC2699CC460072E878 /* Base */,
+				747234FD26C11408006B58D0 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -306,6 +404,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				74E4A7012699CC470072E878 /* Base */,
+				747234FE26C11408006B58D0 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -317,6 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -378,6 +478,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
