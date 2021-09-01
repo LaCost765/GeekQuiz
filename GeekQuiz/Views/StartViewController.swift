@@ -12,13 +12,38 @@ class StartViewController: UIViewController {
     @IBOutlet weak var startGameButton: UIButton!
     @IBOutlet weak var showResultsButton: UIButton!
     @IBOutlet weak var showRulesButton: UIButton!
+    @IBOutlet weak var signOutButton: UIButton!
+    @IBOutlet weak var switchLanguageControl: UISegmentedControl!
     var aiView: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         aiView = createActivityIndicator()
         loadUserBestResult()
+        configureViews()
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func changeLanguage(sender: UISegmentedControl) {
+        
+        guard let selectedLanguage = sender.titleForSegment(at: sender.selectedSegmentIndex) else { return }
+        
+        Game.shared.setLanguage(string: selectedLanguage)
+        configureViews()
+    }
+    
+    func configureViews() {
+        
+        DispatchQueue.main.async { [weak self] in
+            
+            guard let self = self else { return }
+            
+            self.switchLanguageControl.selectedSegmentIndex = Game.shared.language == .en ? 0 : 1
+            self.startGameButton.setTitle("START_GAME_BTN".localized, for: .normal)
+            self.showResultsButton.setTitle("LEADERBOARD_BTN".localized, for: .normal)
+            self.showRulesButton.setTitle("RULES_BTN".localized, for: .normal)
+            self.signOutButton.setTitle("SIGN_OUT_BTN".localized, for: .normal)
+        }
     }
     
     func loadUserBestResult() {
@@ -48,8 +73,8 @@ class StartViewController: UIViewController {
     
     @IBAction func showRulesButtonTapped(sender: Any) {
         
-        let alert = UIAlertController(title: "Правила", message: "GeekQuiz - это викторина с денежным призом. Всего 15 вопросов, после каждых 5 вопросов сложность увеличивается. Простые вопросы стоят 500 $, посложнее - 1500 $, самые сложные - 18000 $. На каждый вопрос есть 4 варианта ответа. Ответив неверно - игра заканчивается и вы получаете лишь половину от суммы, которую заработали. Также есть 3 подсказки, каждой можно воспользоваться лишь 1 раз за игру, при этом каждая неиспользованная подсказка в случае выигрыша увеличит приз в 2 раза. Удачи!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Понятно", style: .cancel, handler: nil))
+        let alert = UIAlertController(title: "RULES_BTN".localized, message: "RULES_TXT".localized, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK".localized, style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
     }

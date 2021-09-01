@@ -13,4 +13,5 @@ target 'GeekQuiz' do
   pod 'SwiftyJSON'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'GoogleMLKit/Translate', '2.3.0'
 end

@@ -18,6 +18,8 @@ class GameViewModel {
     let gameFinished = PublishSubject<String>() // true - win, false - lose + message
     let areQuestionsLoading = BehaviorRelay<Bool>(value: false)
     let totalPrize: BehaviorRelay<Int>
+    let fb = FirebaseFacade()
+    let translator = EnglishRussianTranslator()
     
     init() {
         question = BehaviorRelay(value: nil)
@@ -25,8 +27,6 @@ class GameViewModel {
         loadNewQuestions()
     }
     
-    func subscription() {
-    }
     
     func loadNewQuestions() {
         
@@ -43,10 +43,38 @@ class GameViewModel {
                 guard let self = self else { return }
                 guard questions.count == 5 else { return }
                 self.questions = questions.shuffled()
-                self.question.accept(self.questions.removeLast())
+                //self.question.accept(self.questions.removeLast())
+                self.setNewQuestion(newQuestion: self.questions.removeLast())
                 Game.shared.session?.difficulty.increase()
                 self.areQuestionsLoading.accept(false)
             }).disposed(by: bag)
+    }
+    
+    func setNewQuestion(newQuestion: Question) {
+        
+        if Game.shared.language == .en {
+            question.accept(newQuestion)
+        } else {
+            // need to translate
+            
+            var stringsToTranslate = [newQuestion.category, newQuestion.topic, newQuestion.rightAnswer]
+            stringsToTranslate.append(contentsOf: newQuestion.answers)
+            translator.translate(text: stringsToTranslate.joined(separator: " || ")) { [weak self] translated in
+                
+                guard let self = self else { return }
+                
+                let strings = translated.components(separatedBy: " || ")
+                let cat = strings[0]
+                let topic = strings[1]
+                let rightAnswer = strings[2]
+                var answers = strings.dropFirst(3)
+                answers.append(rightAnswer)
+                print("ORIGINAL QUESTION: \(newQuestion.topic)")
+                
+                let translatedQuestion = Question(topic: topic, category: cat, rightAnswer: rightAnswer, prize: newQuestion.prize, answers: Array(answers))
+                self.question.accept(translatedQuestion)
+            }
+        }
     }
     
     func verifyAnswer(answer: String) {
@@ -57,7 +85,8 @@ class GameViewModel {
             Game.shared.session?.currentBank += q.prize
             totalPrize.accept(Game.shared.session?.currentBank ?? totalPrize.value)
             if questions.count > 0 {
-                question.accept(questions.removeLast())
+//                question.accept(questions.removeLast())
+                setNewQuestion(newQuestion: questions.removeLast())
             } else {
                 loadNewQuestions()
             }

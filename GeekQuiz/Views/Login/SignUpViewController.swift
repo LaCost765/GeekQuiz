@@ -23,6 +23,7 @@ class SignUpViewController: UIScrollableViewController {
         super.viewDidLoad()
         
         configureSubviews()
+        localizeViews()
         bindViewModel()
     }
     
@@ -31,8 +32,19 @@ class SignUpViewController: UIScrollableViewController {
             if success {
                 self.performSegue(withIdentifier: "successfullSignUp", sender: sender)
             } else {
-                self.showInformationAlert(title: "Ошибка регистрации!", message: message ?? "Что-то пошло не так, повторите попытку", confirmButtonTitle: "Отмена", confirmHandler: nil)
+                self.showInformationAlert(title: "FAILED_REG_LBL".localized, message: message ?? "FAIL_MSG".localized, confirmButtonTitle: "CANCEL".localized, confirmHandler: nil)
             }
+        }
+    }
+    
+    func localizeViews() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.emailView.configure(title: "EMAIL_LBL".localized, errorText: "CORRECT_EMAIL_MSG".localized)
+            self.nameView.configure(title: "NAME_LBL".localized, errorText: "CORRECT_NAME_MSG".localized)
+            self.surnameView.configure(title: "SURNAME_LBL".localized, errorText: "CORRECT_NAME_MSG".localized)
+            self.passwordView.configure(title: "PASSWORD_LBL".localized, errorText: "CORRECT_PASSWORD_MSG".localized)
+            self.signUpButton.setTitle("SIGN_UP_BTN".localized, for: .normal)
         }
     }
     
@@ -55,7 +67,6 @@ class SignUpViewController: UIScrollableViewController {
         nameView.handleTextFieldChanged = viewModel.areFieldsCorrect
         surnameView.handleTextFieldChanged = viewModel.areFieldsCorrect
         passwordView.handleTextFieldChanged = viewModel.areFieldsCorrect
-        
     }
 
     /*

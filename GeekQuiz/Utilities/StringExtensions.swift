@@ -19,7 +19,7 @@ extension String {
     enum Regex: String {
         case email = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         case password = "^(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z]).{8,}$"
-        case name = "[А-Я]{1}[а-я]+"
+        case name = "([А-Я]{1}[а-я]+)|([A-Z]{1}[a-z]+)"
     }
     
     func isValid(_ validityType: ValidityType) -> Bool {
@@ -43,7 +43,7 @@ extension String {
     var localized: String {
         
         let str = Bundle.main.path(forResource: UserDefaults.standard.string(forKey: "Language"), ofType: "lproj")
-        let myBundle = Bundle(path: self)
-        return (myBundle?.localizedString(forKey: str, value: "", table: nil))!
+        let myBundle = Bundle(path: str!)
+        return (myBundle?.localizedString(forKey: self, value: "", table: nil))!
     }
 }

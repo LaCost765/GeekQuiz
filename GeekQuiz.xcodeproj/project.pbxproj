@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FBC0125A61972437506FCEE /* Pods_GeekQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A94DE5F54D82134BF05396 /* Pods_GeekQuiz.framework */; };
 		743B5B6026A4820E0094B1DD /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B5B5F26A4820E0094B1DD /* ResultTableViewCell.swift */; };
 		743B5B6226A4839C0094B1DD /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B5B6126A4839C0094B1DD /* ResultsTableViewController.swift */; };
 		7472350126C11422006B58D0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7472350326C11422006B58D0 /* Localizable.strings */; };
@@ -37,11 +36,12 @@
 		74E4A71A269B49AD0072E878 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E4A719269B49AD0072E878 /* NetworkManager.swift */; };
 		74E4A71C269B4A930072E878 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E4A71B269B4A930072E878 /* GameViewModel.swift */; };
 		74F38154269BA1390077F86F /* ParserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F38153269BA1390077F86F /* ParserJSON.swift */; };
+		74F6495526CD431C002CAFF4 /* EnglishRussianTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6495426CD431C002CAFF4 /* EnglishRussianTranslator.swift */; };
+		C07632D333D5B5069E6DEA5C /* Pods_GeekQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A00120B8D4C64A197D4A5E /* Pods_GeekQuiz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		28A94DE5F54D82134BF05396 /* Pods_GeekQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D58EC315FE52511CD8DD8D5 /* Pods-GeekQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekQuiz.debug.xcconfig"; path = "Target Support Files/Pods-GeekQuiz/Pods-GeekQuiz.debug.xcconfig"; sourceTree = "<group>"; };
+		72A00120B8D4C64A197D4A5E /* Pods_GeekQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		743B5B5F26A4820E0094B1DD /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		743B5B6126A4839C0094B1DD /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		747234FD26C11408006B58D0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
@@ -76,7 +76,9 @@
 		74E4A719269B49AD0072E878 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		74E4A71B269B4A930072E878 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		74F38153269BA1390077F86F /* ParserJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserJSON.swift; sourceTree = "<group>"; };
-		C14602C84A64D1F20A72BF56 /* Pods-GeekQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekQuiz.release.xcconfig"; path = "Target Support Files/Pods-GeekQuiz/Pods-GeekQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		74F6495426CD431C002CAFF4 /* EnglishRussianTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishRussianTranslator.swift; sourceTree = "<group>"; };
+		76165D17207E7E053B1ABDBF /* Pods-GeekQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekQuiz.debug.xcconfig"; path = "Target Support Files/Pods-GeekQuiz/Pods-GeekQuiz.debug.xcconfig"; sourceTree = "<group>"; };
+		78208CC7F905583D0FE66FF6 /* Pods-GeekQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekQuiz.release.xcconfig"; path = "Target Support Files/Pods-GeekQuiz/Pods-GeekQuiz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,21 +86,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FBC0125A61972437506FCEE /* Pods_GeekQuiz.framework in Frameworks */,
+				C07632D333D5B5069E6DEA5C /* Pods_GeekQuiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5CB0DE85E80BB7ECB3E0DCA5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				28A94DE5F54D82134BF05396 /* Pods_GeekQuiz.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		74844B0726A61012006D6B95 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +144,7 @@
 				74E4A6F42699CC460072E878 /* GeekQuiz */,
 				74E4A6F32699CC460072E878 /* Products */,
 				8BB4A13BEA5BA63B285F44B1 /* Pods */,
-				5CB0DE85E80BB7ECB3E0DCA5 /* Frameworks */,
+				780B8457A23306A3D8E2FDFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,15 +216,24 @@
 				74E4A719269B49AD0072E878 /* NetworkManager.swift */,
 				74F38153269BA1390077F86F /* ParserJSON.swift */,
 				74918CF926A3181F003F7053 /* GameResultsCaretaker.swift */,
+				74F6495426CD431C002CAFF4 /* EnglishRussianTranslator.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		780B8457A23306A3D8E2FDFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72A00120B8D4C64A197D4A5E /* Pods_GeekQuiz.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		8BB4A13BEA5BA63B285F44B1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4D58EC315FE52511CD8DD8D5 /* Pods-GeekQuiz.debug.xcconfig */,
-				C14602C84A64D1F20A72BF56 /* Pods-GeekQuiz.release.xcconfig */,
+				76165D17207E7E053B1ABDBF /* Pods-GeekQuiz.debug.xcconfig */,
+				78208CC7F905583D0FE66FF6 /* Pods-GeekQuiz.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -242,11 +245,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74E4A7062699CC470072E878 /* Build configuration list for PBXNativeTarget "GeekQuiz" */;
 			buildPhases = (
-				0EA7C1BF8B761F6F602016C3 /* [CP] Check Pods Manifest.lock */,
+				66CC7B1D9526C73585B77FCA /* [CP] Check Pods Manifest.lock */,
 				74E4A6EE2699CC460072E878 /* Sources */,
 				74E4A6EF2699CC460072E878 /* Frameworks */,
 				74E4A6F02699CC460072E878 /* Resources */,
-				38AC22D5D59F6AA67CCD311E /* [CP] Embed Pods Frameworks */,
+				B223AB065ECDA05EE8922B6E /* [CP] Embed Pods Frameworks */,
+				A0262DED81C9C6A171C73148 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -306,7 +310,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0EA7C1BF8B761F6F602016C3 /* [CP] Check Pods Manifest.lock */ = {
+		66CC7B1D9526C73585B77FCA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -328,7 +332,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		38AC22D5D59F6AA67CCD311E /* [CP] Embed Pods Frameworks */ = {
+		A0262DED81C9C6A171C73148 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeekQuiz/Pods-GeekQuiz-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeekQuiz/Pods-GeekQuiz-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeekQuiz/Pods-GeekQuiz-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B223AB065ECDA05EE8922B6E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -366,6 +387,7 @@
 				74E4A712269A5CBE0072E878 /* GameViewController.swift in Sources */,
 				74844B1D26A6BBF0006D6B95 /* FirebaseFacade.swift in Sources */,
 				74844B1A26A6BB60006D6B95 /* StringExtensions.swift in Sources */,
+				74F6495526CD431C002CAFF4 /* EnglishRussianTranslator.swift in Sources */,
 				74844B1526A611FC006D6B95 /* UITitleTextErrorView.swift in Sources */,
 				743B5B6226A4839C0094B1DD /* ResultsTableViewController.swift in Sources */,
 				74844B1726A611FC006D6B95 /* UIPaddingLabel.swift in Sources */,
@@ -450,6 +472,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -512,6 +535,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -532,12 +556,13 @@
 		};
 		74E4A7072699CC470072E878 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D58EC315FE52511CD8DD8D5 /* Pods-GeekQuiz.debug.xcconfig */;
+			baseConfigurationReference = 76165D17207E7E053B1ABDBF /* Pods-GeekQuiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49B53529R9;
+				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = GeekQuiz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -552,12 +577,13 @@
 		};
 		74E4A7082699CC470072E878 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C14602C84A64D1F20A72BF56 /* Pods-GeekQuiz.release.xcconfig */;
+			baseConfigurationReference = 78208CC7F905583D0FE66FF6 /* Pods-GeekQuiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49B53529R9;
+				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = GeekQuiz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -33,8 +33,16 @@ class UITitleTextErrorView: UIView {
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
         errorPaddingLabel.alpha = 0
-        textField.layer.borderWidth = 1.0
+        textField.layer.borderWidth = 0.5
         textField.layer.cornerRadius = 5.0
+    }
+    
+    func configure(title: String, errorText: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.titlePaddingLabel.text = title
+            self.errorPaddingLabel.text = errorText
+        }
     }
     
     func setState(with state: ErrorViewState) {
@@ -49,8 +57,8 @@ class UITitleTextErrorView: UIView {
             textField.layer.borderColor = UIColor.systemGreen.cgColor
         case .focused:
             errorPaddingLabel.alpha = 0
-            titlePaddingLabel.textColor = UIColor.systemOrange
-            textField.layer.borderColor = UIColor.systemOrange.cgColor
+            titlePaddingLabel.textColor = UIColor(red: 255/255, green: 144/255, blue: 101/255, alpha: 1)
+            textField.layer.borderColor = UIColor(red: 255/255, green: 144/255, blue: 101/255, alpha: 1).cgColor
         case .none:
             errorPaddingLabel.alpha = 0
             titlePaddingLabel.textColor = UIColor.systemGray
